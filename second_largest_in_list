@@ -1,0 +1,7 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    m = max(arr)
+    arr.sort()
+    m1 = arr[arr.index(m)-1]
+    print(m1)
