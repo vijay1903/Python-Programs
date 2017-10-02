@@ -1,0 +1,14 @@
+m = int(input())
+s = set(map(int, input().split())) 
+n = int(input())
+for i in range(0,n):
+    a = input().split()
+    if len(a) == 1:
+        eval("s." + a[0] + "()")
+    elif len(a) == 2:
+        eval("s." + a[0] + "(" + a[1] + ")")
+total = 0;
+se = list(s)
+for i in range(len(se)):
+    total += se[i]
+print(total)
