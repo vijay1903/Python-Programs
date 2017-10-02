@@ -1,0 +1,21 @@
+if __name__ == '__main__':
+    mark = []
+    #n = int(input())
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        mark.append([name,score])
+    mark.sort()
+    mark1 = sorted(mark,key=lambda x: x[1])
+    #print(mark1)
+    m = min(b for (a,b) in mark)
+    #print(m)
+    for i in range(len(mark1)):
+        if mark1[i][1]>m:
+            m1 = mark1[i][1]
+            break;
+    #print(m1)
+    i=0
+    for i in range(len(mark1)):
+        if mark1[i][1]==m1:
+            print(mark1[i][0])
