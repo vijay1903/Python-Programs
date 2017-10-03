@@ -1,0 +1,18 @@
+a = set(input().split())
+print(all(a > set(input().split()) for _ in range(int(input()))))
+
+
+
+
+A = set(input().split()) 
+n = int(input())
+superset = True
+for i in range(0,n):
+    aa = A
+    B = set(input().split())
+    print(len(aa),len(aa.union(B)),(len(B)),(len(aa.union(B))-(len(B))))
+    if((len(aa.union(B))-(len(B)))<1):
+        superset = True
+    else:
+        superset = False
+print(superset)
